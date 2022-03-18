@@ -64,7 +64,7 @@ Great Bow, 1, 1, 3, 2
 
 ##Third Layer
 ####Magic system:
-+Magic weapons
++Magic weapons. Anime references. 
 ####Sell/discard:
 ####Max inventory:
 ####encumbrance:
