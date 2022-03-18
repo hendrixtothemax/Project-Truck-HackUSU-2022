@@ -64,6 +64,7 @@ Great Bow, 1, 1, 3, 2
 
 ##Third Layer
 ####Magic system:
++Magic weapons
 ####Sell/discard:
 ####Max inventory:
 ####encumbrance:
@@ -77,7 +78,7 @@ Great Bow, 1, 1, 3, 2
 ####More options/variability 
 + More story threads. 
 + Expand the story tree.
-####
+####Weapon Upgrades: 
 
 #
 
