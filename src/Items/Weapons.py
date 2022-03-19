@@ -1,4 +1,5 @@
 import os.path
+import random
 
 from src.Items.Weapon import Weapon
 
@@ -61,4 +62,12 @@ class Weapons:
             return deepcopy(self.weaponsDataByLevel.get(level))
         else:
             return None
+
+    def getRandomWeaponByType(self, itype):
+        index = random.randint(0, len(self.getWeaponByType(itype))-1)
+        return self.getWeaponByType(itype)[index]
+
+    def getRandomWeaponByLevel(self, level):
+        index = random.randint(0, len(self.getWeaponByLevel(level))-1)
+        return self.getWeaponByLevel(level)[index]
         
