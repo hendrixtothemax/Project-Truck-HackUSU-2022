@@ -33,17 +33,17 @@ class CavesEvent(Event):
         print("You manage to recover just in time to see a figure lurch from the shadows...")
         if floor == 1:
             possibleEnemies = [ChildLich(), Ghoul(), Skeleton(), Zombie()]
-            combat = Combat(player, possibleEnemies, 2)
+            combat = Combat(player, possibleEnemies, 2,floor)
             combat.start()
         elif floor == 2:
             possibleEnemies = [ArmedBeggar(), Bandit(), EscapedConvict(), Ninja()]
-            combat = Combat(player, possibleEnemies, 2)
+            combat = Combat(player, possibleEnemies, 2,floor)
             combat.start()
         elif floor == 3:
             possibleEnemies = [Assassin(), RougeSoldier(), UndeadWitch(), Vampire()]
-            combat = Combat(player, possibleEnemies, 3)
+            combat = Combat(player, possibleEnemies, 3,floor)
             combat.start()
         elif floor == 4:
             possibleEnemies = [BlightedDemon(), CursedSpirit(), MadWarlock(), UndeadDuelist()]
-            combat = Combat(player, possibleEnemies, 4)
+            combat = Combat(player, possibleEnemies, 4,floor)
             combat.start()

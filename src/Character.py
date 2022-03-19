@@ -26,7 +26,7 @@ class character:
         self.equippedItem = weapon
 
     def addItemToInventory(self, item):
-        self.inventory += item
+        self.inventory.append(item)
 
     def printInventory(self):
         print(f"\n{self.name}'s Inventory")
