@@ -33,17 +33,17 @@ class ForestEvent(Event):
         print("All at once it stops, the dead silence consuming you. You whirl toward the sound of footfall to see a dark figure break through the trees...")
         if floor == 1:
             possibleEnemies = [ChildLich(), Ghoul(), Skeleton(), Zombie()]
-            combat = Combat(player, possibleEnemies, 2)
+            combat = Combat(player, possibleEnemies, 2,floor)
             combat.start()
         elif floor == 2:
             possibleEnemies = [ArmedBeggar(), Bandit(), EscapedConvict(), Ninja()]
-            combat = Combat(player, possibleEnemies, 2)
+            combat = Combat(player, possibleEnemies, 2,floor)
             combat.start()
         elif floor == 3:
             possibleEnemies = [Assassin(), RougeSoldier(), UndeadWitch(), Vampire()]
-            combat = Combat(player, possibleEnemies, 3)
+            combat = Combat(player, possibleEnemies, 3,floor)
             combat.start()
         elif floor == 4:
             possibleEnemies = [BlightedDemon(), CursedSpirit(), MadWarlock(), UndeadDuelist()]
-            combat = Combat(player, possibleEnemies, 4)
+            combat = Combat(player, possibleEnemies, 4,floor)
             combat.start()
