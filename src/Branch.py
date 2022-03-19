@@ -17,8 +17,8 @@ class branch:
     def __init__(self,player):
         self.player = player
         self.events = []
-        print(self.events)
         self.randomevent()
+        print(self.events)
 
     def randomevent(self):
 
@@ -37,10 +37,13 @@ class branch:
 
         events = [event1, event2, event3, event4, event5, event6, event7, event8, event9, event10, event11, event12]
 
+        # TESTING CODE BELOW - CAN REMOVE LINE DIRECTLY BELOW
+        print(event1)
+
         for i in range(4):
             location = random.randint(0, len(events) - 1)
             self.events.append(events.pop(location))
 
 
-        for event in self.events:
-            event.run(self.player)
+        # for event in self.events:
+        #     event.run(self.player)

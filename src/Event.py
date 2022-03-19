@@ -5,6 +5,8 @@ class Event:
 
     def run(self, player):
         print("Event Class")
-    
+
+    def __repr__(self):
+        return self.name
 
 

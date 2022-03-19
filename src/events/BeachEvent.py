@@ -13,3 +13,5 @@ class BeachEvent(Event):
         time.sleep(2)
         print("You narrow your eyes at a dark form in the sand. It begins to move...")
         #initiate combat
+
+
