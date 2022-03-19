@@ -20,7 +20,10 @@ class Combat:
     def pickEnemies(self, possibleEnemyList):
         enemies = []
         for i in range(self.numbEnemies):
-            index = Random.randint(0, len(possibleEnemyList) - 1)
+            maxIndex = len(possibleEnemyList) - 1
+            index = 0
+            if not maxIndex < 1:
+                index = Random.randint(0, maxIndex)
             enemies.append(possibleEnemyList[index])
         return enemies
 
@@ -35,13 +38,14 @@ class Combat:
         turnActive = True
         while turnActive:
             # Have TUI for User to Interact with
-            userInput = UserInput("What will you do?", len(self.__COMBAT_GUI), self.__COMBAT_GUI)
+            inputObj = UserInput("What will you do?", len(self.__COMBAT_GUI), self.__COMBAT_GUI)
+            userInput = inputObj.getInput()
             if userInput == 1:
                 # List Enemies
                 print("\nEnemies:")
                 for enemy in self.enemies:
                     print(f"\t{enemy.name}: {enemy.health.healthReadout()}")
-                print("\n")
+                print("")
             elif userInput == 2:
                 # Attack TUI
                 self.playerAttackTUI()

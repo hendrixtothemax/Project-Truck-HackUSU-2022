@@ -8,5 +8,5 @@ class Zombie(Enemy):
         health = 13
         floor = 0
         minDamage = 1
-        maxDamage = 2
+        maxDamage = 3
         super().__init__(name, desc, health, floor, minDamage, maxDamage)

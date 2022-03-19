@@ -19,12 +19,15 @@ class Enemy:
         return self.name
 
     def determineDamage(self):
-        return Random.randint(self.minDamage, self.maxDamage)
+        print(self.minDamage)
+        print(self.maxDamage)
+        damage = Random.randint(self.minDamage, self.maxDamage)
+        return damage
 
     def attack(self, player):
         damage = self.determineDamage()
         print(f"You took {damage} points of damage from {self.name}.")
-        player.health.subHealth()
+        player.health.subHealth(damage)
 
 # Skeleton = enemy("Skeleton","A walking corpse devoid of flesh.", 10,0)
 # Zombie = enemy("Zombie","A walking corpse with rotting flesh clinging to the bones.",13,0)
