@@ -1,6 +1,11 @@
 import random
 import time
 
+from src.Combat import Combat
+from src.FloorBosses.F1Boss import Aqua
+from src.FloorBosses.F2Boss import Rem
+from src.FloorBosses.F3Boss import Megumin
+from src.FloorBosses.F4Boss import Ram
 from src.SideEvents.BuryCorpses import BuryCorpses
 from src.SideEvents.CatchPigs import CatchPigs
 from src.SideEvents.CleanWarehouse import CleanWarehouse
@@ -25,10 +30,11 @@ from src.events.VillaEvent import VillaEvent
 
 
 class branch:
-    def __init__(self,player):
+    def __init__(self,player,floor = 1):
         self.player = player
         self.events = []
         self.quests = []
+        self.floor = floor
 
         event1 = BeachEvent()
         event2 = BogEvent()
@@ -56,10 +62,11 @@ class branch:
 
         self.validquests = [quest1, quest2, quest3, quest4, quest5, quest6, quest7, quest8]
 
-        self.randomevent()
+        #self.randomevent()
         time.sleep(3)
         self.randomsidequest()
-        self.randomevent()
+        #self.randomevent()
+        self.floorboss(floor)
         # print(self.events)
         # print(self.quests)
 
@@ -112,3 +119,23 @@ class branch:
 
         #test like above
         #self.quests[0].run(self.player)
+
+
+    def floorboss(self,floor):
+        print("yadda yadda")
+        if floor == 1:
+            possibleEnemies = [Aqua()]
+            combat = Combat(self.player, possibleEnemies, 1)
+            combat.start()
+        elif floor == 2:
+            possibleEnemies = [Rem()]
+            combat = Combat(self.player, possibleEnemies, 1)
+            combat.start()
+        elif floor == 3:
+            possibleEnemies = [Megumin()]
+            combat = Combat(self.player, possibleEnemies, 1)
+            combat.start()
+        elif floor == 4:
+            possibleEnemies = [Ram()]
+            combat = Combat(self.player, possibleEnemies, 1)
+            combat.start()
