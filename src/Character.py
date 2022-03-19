@@ -5,6 +5,9 @@ class character:
         self.description = description
         self.health = health
 
+    def fullDesc(self):
+        return f"{self.name}: {self.description}\n\t\tTheir health is: {str(self.health)}"
+
     def status(self):
         print(self.name + ": " + self.description)
         print("          Their health is: " + str(self.health))
