@@ -110,6 +110,8 @@ def towerstart(player):
     print("Beneath those words, you see FOUR pieces of paper pegged to the wood, labeled...")
 
 
+def floorlayout():
+    branch(player)
 
 
 
@@ -121,4 +123,4 @@ player = choosecharacter()
 game.setPlayer(player)
 #time.sleep(3)
 towerstart(player)
-branch(player)
+floorlayout()
