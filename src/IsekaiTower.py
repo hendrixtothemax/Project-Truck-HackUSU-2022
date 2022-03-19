@@ -16,11 +16,11 @@ def choosecharacter():
     prompt = ""
 
     print("\n\n")
-    print("Hello player! Please choose a character from below")
+    print("Hello player! Please choose a character from below\n")
     time.sleep(1)
     prompt += f"1- {Tohka.fullDesc()}\n"
     prompt += f"2- {Rimuru.fullDesc()}\n"
-    prompt += f"3- {Kurumi.fullDesc()}"
+    prompt += f"3- {Kurumi.fullDesc()}\n"
     userInput = UserInput(prompt,3,[str(Tohka),str(Rimuru),str(Kurumi)])
     choice = userInput.getInput()
     if choice == 1:
@@ -112,6 +112,7 @@ def towerstart(player):
 
 def floorlayout():
     for i in range(4):
+        i = 5
         branch(player, i+1)
 
 
