@@ -1,8 +1,24 @@
 
 from Branch import branch
 import time
+from Character import character
 
-branch()
+
+def choosecharacter():
+    Tohka = character("Tohka","A strong headed girl with a tendency to shoot first and ask questions later")
+    Rimuru = character("Rimuru", "A down-to-earth warrior with only the best for his friends in mind")
+    Kurumi = character("Kurumi", "A psychopathic murderer who really loves to kill things.")
+    print("Hello player! Please choose a character from below")
+    print("1- " , end= " ")
+    Tohka.status()
+    print("2- " , end= " ")
+    Rimuru.status()
+    print("3- " , end= " ")
+    Kurumi.status()
+
+
+
+
 def storystart():
     print("It's a nice lovely day you find yourself in. The cars are loud, the children screaming, and the air full to chocking with smoke.")
     time.sleep(5)
@@ -54,6 +70,10 @@ def towerstart():
 
 
 
+#branch()
 
 
+
+#Chain of Events
+choosecharacter()
 
