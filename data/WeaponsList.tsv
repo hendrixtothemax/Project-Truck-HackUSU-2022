@@ -1,4 +1,5 @@
 Weapon Name	Description	Type (0-3)	Low Damage	High Damage	Level (0-5)
+Hand    The flesh on the end of your arm    0   1   2   0
 Flimsy Sword	A flimsy sword held together by the hopes and dreams of beginning adventurers. A stick might prove more deadly. 	0	1	4	0
 Broken Greatsword	A large hunk of metal seemingly torn right from the ground. It looks more like a shield than a sword...	0	2	5	0
 Sad Shortbow	This is a bow... at least that's what people tell you. It looks more like a stick wth string tied to it than anything else. 	1	2	4	0
