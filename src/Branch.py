@@ -176,7 +176,27 @@ class branch:
 
 
     def finalboss(self,floor):
-        if floor == 5:
+        time.sleep(2)
+        print("\n")
+        print("The FIFTH FLOOR feels different from the rest. It's darker and far more sinister.")
+        time.sleep(2)
+        print("You get an overwheling sense that something is coming. That something incredibly evil resides behind those dark doors.")
+        time.sleep(2)
+        print("You reach for the door handles, sweat beading on your brow, hands shaking.")
+        time.sleep(2)
+        print("1- Laugh in the face of fear and throw open the door.")
+        time.sleep(2)
+        print("2- Retreat. Now. Right now. This foe... is far too powerful to kill. To powerful to defy.")
+        userInput = UserInput("Type 1 or 2", 2, ["",""])
+        choice1 = userInput.getInput()
+        if choice1 == 1:
+            print("The door thunders open and you step in with a cruel smile on your face.")
+            time.sleep(2)
             possibleEnemies = [DemonLord()]
             combat = Combat(self.player, possibleEnemies, 1, floor, True)
             combat.start()
+        elif choice1 == 2:
+            print("You suck in a shaking breath... then retreat from the floor. Better to be alive for what little time remained of the universe than to die for nothing.")
+
+
+
