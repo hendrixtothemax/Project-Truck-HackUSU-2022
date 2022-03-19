@@ -1,5 +1,5 @@
 import sys
-
+import time
 from src.Health import Health
 from src.Items.Weapons import Weapons
 from src.UserInput import UserInput
@@ -50,8 +50,14 @@ class character:
         print(f"\nYou have equipped: {chosenItem.name}")
 
     def die(self):
-        print(f"\nYou, {self.name} are dead...")
-        print(f"\nIt is a shame, the world soon after your downfall fell under the control of the CHAOS.")
+        time.sleep(2)
+        print(f"\nYou, {self.name}, are dead...")
+        time.sleep(2)
+        print(f"\nIt is a shame, soon after your downfall the entire universe was systematically deconstructed, every living being eradicated.")
+        time.sleep(2)
+        print("\n")
+        print("--GAME OVER--")
+
         sys.exit()
 
 

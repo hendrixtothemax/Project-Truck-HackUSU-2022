@@ -43,9 +43,9 @@ class BogEvent(Event):
             combat.start()
         elif floor == 3:
             possibleEnemies = [Assassin(),RougeSoldier(),UndeadWitch(),Vampire()]
-            combat = Combat(player, possibleEnemies, 3,floor)
+            combat = Combat(player, possibleEnemies, 2,floor)
             combat.start()
         elif floor == 4:
             possibleEnemies = [BlightedDemon(),CursedSpirit(),MadWarlock(),UndeadDuelist()]
-            combat = Combat(player, possibleEnemies, 4,floor)
+            combat = Combat(player, possibleEnemies, 2,floor)
             combat.start()

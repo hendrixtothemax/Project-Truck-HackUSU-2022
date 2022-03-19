@@ -1,4 +1,5 @@
 import random
+import sys
 import time
 
 from src.Combat import Combat
@@ -197,6 +198,12 @@ class branch:
             combat.start()
         elif choice1 == 2:
             print("You suck in a shaking breath... then retreat from the floor. Better to be alive for what little time remained of the universe than to die for nothing.")
+
+        time.sleep(2)
+        print(f"\nVictory! You have defeated the enemy! The universe is saved!")
+        print(f"\n--YOU WIN--")
+
+        sys.exit()
 
 
 
