@@ -3,7 +3,7 @@ class Event:
         self.name = name
         self.desc = desc
 
-    def run(self):
+    def run(self, player):
         print("Event Class")
     
 

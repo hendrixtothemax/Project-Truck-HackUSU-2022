@@ -3,6 +3,7 @@ from Branch import branch
 import time
 from Character import character
 from UserInput import UserInput
+from src.Game import Game
 
 
 def choosecharacter():
@@ -113,8 +114,9 @@ def towerstart(player):
 
 #Chain of Events
 #storystart()
+game = Game()
 player = choosecharacter()
+game.setPlayer(player)
 #time.sleep(3)
 towerstart(player)
-
 
