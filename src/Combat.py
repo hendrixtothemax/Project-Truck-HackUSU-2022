@@ -86,7 +86,7 @@ class Combat:
         for enemy in self.enemies:
             enemy.attack(self.player)
             if self.player.health.health < 0:
-                print("YOU (THE PLAYER) SHOULD BE DEAD")
+                self.player.die()
         print(f"\nYour health: {self.player.health.healthReadout()}")
 
     def playerAttackTUI(self):
@@ -98,11 +98,12 @@ class Combat:
         userInput = inputObj.getInput()
         if userInput == 1:
             return
+        # damage to enemies & enemy death
         playerDamage = self.player.getCharacterDamage()
         chosenEnemy = self.enemies[userInput-2]
         chosenEnemy.health.subHealth(playerDamage)
         print(f"\n{chosenEnemy.name} has taken {playerDamage} points of damage! {chosenEnemy.health.healthReadout()}")
-        if chosenEnemy.health.health < 0:
+        if chosenEnemy.health.health <= 0:
             print(f"The {chosenEnemy.name} has died!")
             self.enemies.pop(userInput-2)
         print("")

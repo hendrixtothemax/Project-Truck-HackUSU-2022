@@ -1,3 +1,4 @@
+import sys
 
 from src.Health import Health
 from src.Items.Weapons import Weapons
@@ -47,5 +48,10 @@ class character:
         chosenItem = self.inventory[userInput-2]
         self.setWeapon(chosenItem)
         print(f"\nYou have equipped: {chosenItem.name}")
+
+    def die(self):
+        print(f"You, {self.name} are dead...")
+        print(f"It is a shame, the world soon after your downfall fell under the control of the CHAOS.")
+        sys.exit()
 
 
