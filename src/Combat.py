@@ -13,11 +13,12 @@ class Combat:
         "Pass"
     ]
 
-    def __init__(self, player, possibleEnemies, numbOfEnemies,floor):
+    def __init__(self, player, possibleEnemies, numbOfEnemies,floor,FB=False):
         self.numbEnemies = numbOfEnemies
         self.enemies = self.pickEnemies(possibleEnemies)
         self.player = player
         self.floor = floor
+        self.FB = FB
 
     def pickEnemies(self, possibleEnemyList):
         enemies = []
@@ -46,16 +47,17 @@ class Combat:
                 break
         print("\n!COMBAT HAS ENDED!")
 
-        weapon = self.player.weapons.getRandomWeaponByLevel(str(self.floor))
-        self.player.addItemToInventory(weapon)
-        print(f"{weapon.name} has been added to your inventory!")
+        if not self.FB:
+            weapon = self.player.weapons.getRandomWeaponByLevel(str(self.floor))
+            self.player.addItemToInventory(weapon)
+            print(f"{weapon.name} has been added to your inventory!")
 
-        print("\n")
-        print("You flee the scene with your new weapon in hand.")
-        time.sleep(2)
-        print("The next day...")
-        print("\n\n")
-        time.sleep(2)
+            print("\n")
+            print("You flee the scene with your new weapon in hand.")
+            time.sleep(2)
+            print("The next day...")
+            print("\n\n")
+            time.sleep(2)
 
     def playerTurn(self):
         turnActive = True

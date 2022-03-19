@@ -64,9 +64,21 @@ class branch:
 
         self.randomevent(floor)
         time.sleep(3)
+        player.health.addhealth(10)
+        print("\n")
+        print("*You have healed 10 hit points overnight!*")
+        print("\n")
         self.randomsidequest(floor)
         self.randomevent(floor)
+        player.health.addhealth(10)
+        print("\n")
+        print("*You have healed 10 hit points overnight!*")
+        print("\n")
         self.floorboss(floor)
+        player.health.addhealth(99)
+        print("\n")
+        print("*The magical barrier between floors has restored you to full health!*")
+        print("\n")
         # print(self.events)
         # print(self.quests)
 
@@ -132,22 +144,24 @@ class branch:
         print("YOU MUST DEFEAT IT TO ADVANCE TO THE NEXT FLOOR")
         if floor == 1:
             possibleEnemies = [Aqua()]
-            combat = Combat(self.player, possibleEnemies, 1,floor)
+            combat = Combat(self.player, possibleEnemies, 1,floor,True)
             combat.start()
         elif floor == 2:
             possibleEnemies = [Rem()]
-            combat = Combat(self.player, possibleEnemies, 1,floor)
+            combat = Combat(self.player, possibleEnemies, 1,floor,True)
             combat.start()
         elif floor == 3:
             possibleEnemies = [Megumin()]
-            combat = Combat(self.player, possibleEnemies, 1,floor)
+            combat = Combat(self.player, possibleEnemies, 1,floor,True)
             combat.start()
         elif floor == 4:
             possibleEnemies = [Ram()]
-            combat = Combat(self.player, possibleEnemies, 1,floor)
+            combat = Combat(self.player, possibleEnemies, 1,floor,True)
             combat.start()
         print("\n")
         print("YOU HAVE DEFEATED THE FLOOR BOSS")
         time.sleep(2)
         print("YOU ADVANCE TO THE NEXT FLOOR")
         self.floor += 1
+        print("\n")
+        print("You climb to the top of the spire, ")

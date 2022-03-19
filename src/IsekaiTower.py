@@ -111,7 +111,8 @@ def towerstart(player):
 
 
 def floorlayout():
-    branch(player)
+    for i in range(4):
+        branch(player, i+1)
 
 
 
