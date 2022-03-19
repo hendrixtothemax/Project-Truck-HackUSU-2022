@@ -2,6 +2,8 @@ import os.path
 
 from src.Items.Weapon import Weapon
 
+from copy import deepcopy
+
 
 class Weapons:
 
@@ -10,9 +12,6 @@ class Weapons:
         self.weaponsDataByType = {}
         self.weaponsDataByLevel = {}
         self.__readTSV()
-        print(self.weaponsDataByName)
-        print(self.weaponsDataByType)
-        print(self.weaponsDataByLevel)
 
     def __readTSV(self):
         weaponsData = {}
@@ -44,3 +43,22 @@ class Weapons:
                     self.weaponsDataByLevel[weaponData[5]] = [weapon]
 
         file.close()
+
+    def getWeaponByName(self, name):
+        if self.weaponsDataByName.__contains__(name):
+            return deepcopy(self.weaponsDataByName.get(name))
+        else:
+            return None
+
+    def getWeaponByType(self, itype):
+        if self.weaponsDataByName.__contains__(itype):
+            return deepcopy(self.weaponsDataByName.get(itype))
+        else:
+            return None
+
+    def getWeaponByLevel(self, level):
+        if self.weaponsDataByName.__contains__(level):
+            return deepcopy(self.weaponsDataByName.get(level))
+        else:
+            return None
+        
