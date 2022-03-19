@@ -10,11 +10,6 @@ class character:
     def fullDesc(self):
         return f"{self.name}: {self.description}\n\t\tTheir health is: {self.health.health}"
 
-    def status(self):
-        print(self.name + ": " + self.description)
-        print("          Their health is: " + self.health.health)
-
-
     def __str__(self):
         return self.name
 
