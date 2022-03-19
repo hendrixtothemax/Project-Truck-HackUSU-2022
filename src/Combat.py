@@ -48,7 +48,7 @@ class Combat:
                 pass
             elif userInput == 4:
                 # End Turn
-                turnActive == False
+                turnActive = False
 
     def enemyTurn(self):
         for enemy in self.enemies:
