@@ -50,15 +50,14 @@ class Weapons:
         else:
             return None
 
-    def getWeaponByType(self, itype):
-        if self.weaponsDataByName.__contains__(itype):
-            return deepcopy(self.weaponsDataByName.get(itype))
+    def getWeaponsByType(self, itype):
+        if self.weaponsDataByType.__contains__(itype):
+            return deepcopy(self.weaponsDataByType.get(itype))
         else:
             return None
 
-    def getWeaponByLevel(self, level):
-        if self.weaponsDataByName.__contains__(level):
-            return deepcopy(self.weaponsDataByName.get(level))
+    def getWeaponsByLevel(self, level):
+        if self.weaponsDataByLevel.__contains__(level):
+            return deepcopy(self.weaponsDataByLevel.get(level))
         else:
             return None
-        
