@@ -6,6 +6,7 @@ from UserInput import UserInput
 from src.Game import Game
 
 
+
 def choosecharacter():
     player = ""
     Tohka = character("Tohka","A strong headed girl with a tendency to shoot first and ask questions later",100)
@@ -107,7 +108,8 @@ def towerstart(player):
     print("You wade through the crowd to the side of the street where you find a large wooden board with the words 'AVAILABLE QUESTS' written at the top.")
     time.sleep(1)
     print("Beneath those words, you see FOUR pieces of paper pegged to the wood, labeled...")
-    branch()
+
+
 
 
 
@@ -119,4 +121,4 @@ player = choosecharacter()
 game.setPlayer(player)
 #time.sleep(3)
 towerstart(player)
-
+branch(player)
