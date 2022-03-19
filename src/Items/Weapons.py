@@ -28,8 +28,8 @@ class Weapons:
             else:
                 weaponData = line.replace("\n", "")
                 weaponData = weaponData.split("\t")
-                weapon = Weapon(weaponData[0], weaponData[1], weaponData[2], weaponData[5], weaponData[3],
-                                weaponData[4])
+                weapon = Weapon(weaponData[0], weaponData[1], weaponData[2], weaponData[5], int(weaponData[3]),
+                                int(weaponData[4]))
 
                 self.weaponsDataByName[weaponData[0]] = weapon
 

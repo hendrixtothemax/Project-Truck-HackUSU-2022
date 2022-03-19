@@ -96,7 +96,7 @@ class Combat:
         userInput = inputObj.getInput()
         if userInput == 1:
             return
-        playerDamage = 99
+        playerDamage = self.player.getCharacterDamage()
         chosenEnemy = self.enemies[userInput-2]
         chosenEnemy.health.subHealth(playerDamage)
         print(f"\n{chosenEnemy.name} has taken {playerDamage} points of damage! {chosenEnemy.health.healthReadout()}")

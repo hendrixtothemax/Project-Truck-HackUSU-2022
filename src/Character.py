@@ -38,10 +38,12 @@ class character:
     def inventoryTUI(self):
         self.printInventory()
         emptyStrings = ["Cancel"]
-        for i in range():
+        for i in range(len(self.inventory)):
             emptyStrings.append("")
-        inputObj = UserInput("",len(self.inventory),emptyStrings)
+        inputObj = UserInput("",len(emptyStrings),emptyStrings)
         userInput = inputObj.getInput()
+        if userInput == 1:
+            return
         chosenItem = self.inventory[userInput-2]
         self.setWeapon(chosenItem)
         print(f"\nYou have equipped: {chosenItem.name}")
