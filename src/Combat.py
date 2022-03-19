@@ -38,7 +38,10 @@ class Combat:
             userInput = UserInput("What will you do?", len(self.__COMBAT_GUI), self.__COMBAT_GUI)
             if userInput == 1:
                 # List Enemies
-                pass
+                print("\nEnemies:")
+                for enemy in self.enemies:
+                    print(f"\t{enemy.name}: {enemy.health.healthReadout()}")
+                print("\n")
             elif userInput == 2:
                 # Attack TUI
                 self.playerAttackTUI()
@@ -54,7 +57,7 @@ class Combat:
         for enemy in self.enemies:
             enemy.attack(self.player)
             if self.player.health.health < 0:
-                print("YOU SHOULD BE DEAD")
+                print("YOU (THE PLAYER) SHOULD BE DEAD")
         print(f"\nYour health: {self.player.health.healthReadout()}")
 
     def playerAttackTUI(self):
@@ -72,3 +75,4 @@ class Combat:
             self.enemies.pop(userInput-2)
         else:
             print(f"{chosenEnemy.name}")
+            
