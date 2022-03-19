@@ -8,6 +8,7 @@ from src.SideEvents.DiscoverChest import DiscoverChest
 from src.SideEvents.HelpBartender import HelpBartender
 from src.SideEvents.HelpOldMan import HelpOldMan
 from src.SideEvents.RecoverLostItem import RecoverLostItem
+from src.UserInput import UserInput
 from src.events.BeachEvent import BeachEvent
 from src.events.BogEvent import BogEvent
 from src.events.CastleEvent import CastleEvent
@@ -29,8 +30,9 @@ class branch:
         self.quests = []
         self.randomevent()
         self.randomsidequest()
-        print(self.events)
-        print(self.quests)
+        self.randomevent()
+        # print(self.events)
+        # print(self.quests)
 
     def randomevent(self):
 
@@ -50,14 +52,28 @@ class branch:
         events = [event1, event2, event3, event4, event5, event6, event7, event8, event9, event10, event11, event12]
 
         # Testing Code Line Directly Below
-        self.events.append(events.pop(0))
+        #self.events.append(events.pop(0))
 
         for i in range(4):
             location = random.randint(0, len(events) - 1)
             self.events.append(events.pop(location))
 
+        print("You look at the QUEST postings to see what is available.")
+
+
+        userInput = UserInput("Type 1, 2, 3, or 4 to choose a quest.", 4, [self.events[0], self.events[1],self.events[2],self.events[3]])
+        choice1 = userInput.getInput()
+        if choice1 == 1:
+            self.events[0].run(self.player)
+        elif choice1 ==2:
+            self.events[1].run(self.player)
+        elif choice1 == 3:
+            self.events[2].run(self.player)
+        elif choice1 == 4:
+            self.events[3].run(self.player)
+
         #Testing Code Line Directly Below
-        self.events[0].run(self.player)
+        #self.events[0].run(self.player)
 
         # for event in self.events:
         #     event.run(self.player)
@@ -74,6 +90,14 @@ class branch:
 
         quests = [quest1, quest2, quest3, quest4, quest5, quest6, quest7, quest8]
 
-        for i in range(1):
+        #test like above
+        #self.quests.append(quests.pop(0))
+
+        for i in range(len(quests)):
             location = random.randint(0, len(quests) - 1)
-            self.quests.append(quests.pop(location))
+            quests.append(quests.pop(location))
+
+        quests[location].run(self.player)
+
+        #test like above
+        #self.quests[0].run(self.player)
