@@ -10,3 +10,6 @@ class Aqua(Enemy):
         minDamage = 4
         maxDamage = 6
         super().__init__(name, desc, health, floor, minDamage, maxDamage)
+
+    def approach(self):
+        return f"The floor boss {self.name} approaches you. {self.desc} Their health is: {self.health.healthReadout()}"
