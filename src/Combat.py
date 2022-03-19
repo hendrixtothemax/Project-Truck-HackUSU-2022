@@ -75,4 +75,3 @@ class Combat:
             self.enemies.pop(userInput-2)
         else:
             print(f"{chosenEnemy.name}")
-            
