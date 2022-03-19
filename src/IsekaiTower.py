@@ -13,6 +13,7 @@ def choosecharacter():
 
     prompt = ""
 
+    print("\n\n")
     print("Hello player! Please choose a character from below")
     time.sleep(3)
     prompt += f"1- {Tohka.fullDesc()}\n"
@@ -29,7 +30,7 @@ def choosecharacter():
     return player
 
 
-def storystart(player):
+def storystart():
     print("It's a nice lovely day you find yourself in. The cars are loud, the children screaming, and the air full to chocking with smoke.")
     time.sleep(1)
     print("As you stride down the crowded, dirty street, you spy an old grandma edging her way across the crosswalk.")
@@ -75,20 +76,45 @@ def storystart(player):
 
 
 def towerstart(player):
+    print("\t\t\t|")
+    print("\t\t\t|")
+    print("\t\t\t|")
+    print("\t\t\t|")
+    print("\t\t\t|")
+    print("\t\t\t|")
 
-    print("Good Morning " + str(player))
+    print("Good Morning " + str(player) + "! Congratulations, you have died.")
+    time.sleep(1)
+    print("Oh, don't be so confused. I'll break it all down for you.")
+    time.sleep(1)
+    print("First, this is no longer your world. You have been reincarnated as " + str(player) + " in a new world full of magic and evil demons")
+    time.sleep(1)
+    print("Specifically, this world is a TOWER. Each floor in this tower has a series of QUESTS and SIDE QUESTS to complete. To progress, one must complete these quests.")
+    time.sleep(1)
+    print("At the end of each floor resides a FLOOR BOSS which you must beat to continue on to the next floor.")
+    time.sleep(1)
+    print("Once you beat all the floor bosses, you can confront the FINAL BOSS, the Demon Lord.")
+    time.sleep(1)
+    print("Failure to beat this foul beast will result in the rapid deconstruction of the entire universe.")
+    time.sleep(1)
+    print("I'm afraid time is running short " + str(player) + ", best hurry onward.")
 
+    print("\n\n")
 
+    print("You find yourself standing in the middle of a town crowded to breaking with people. You can hardly walk two steps without knocking someone over.")
+    time.sleep(1)
+    print("You wade through the crowd to the side of the street where you find a large wooden board with the words 'AVAILABLE QUESTS' written at the top.")
+    time.sleep(1)
+    print("Beneath those words, you see FOUR pieces of paper pegged to the wood.")
+    branch()
 
-
-#branch()
 
 
 
 #Chain of Events
+#storystart()
 player = choosecharacter()
-storystart(player)
-time.sleep(3)
+#time.sleep(3)
 towerstart(player)
 
 
