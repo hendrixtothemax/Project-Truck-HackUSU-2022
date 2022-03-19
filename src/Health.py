@@ -38,3 +38,6 @@ class Health:
     def subArmor(self, subArmor):
         proposedNewArmor = self.armor - subArmor
         self.health = proposedNewArmor
+
+    def healthReadout(self):
+        return f"[{self.health}/{self.maxHealth}]"
