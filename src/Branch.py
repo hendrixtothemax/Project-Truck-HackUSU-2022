@@ -1,4 +1,13 @@
 import random
+
+from src.SideEvents.BuryCorpses import BuryCorpses
+from src.SideEvents.CatchPigs import CatchPigs
+from src.SideEvents.CleanWarehouse import CleanWarehouse
+from src.SideEvents.DeliverMessage import DeliverMessage
+from src.SideEvents.DiscoverChest import DiscoverChest
+from src.SideEvents.HelpBartender import HelpBartender
+from src.SideEvents.HelpOldMan import HelpOldMan
+from src.SideEvents.RecoverLostItem import RecoverLostItem
 from src.events.BeachEvent import BeachEvent
 from src.events.BogEvent import BogEvent
 from src.events.CastleEvent import CastleEvent
@@ -17,8 +26,11 @@ class branch:
     def __init__(self,player):
         self.player = player
         self.events = []
+        self.quests = []
         self.randomevent()
+        self.randomsidequest()
         print(self.events)
+        print(self.quests)
 
     def randomevent(self):
 
@@ -49,3 +61,19 @@ class branch:
 
         # for event in self.events:
         #     event.run(self.player)
+
+    def randomsidequest(self):
+        quest1 = BuryCorpses()
+        quest2 = CatchPigs()
+        quest3 = CleanWarehouse()
+        quest4 = DeliverMessage()
+        quest5 = DiscoverChest()
+        quest6 = HelpBartender()
+        quest7 = HelpOldMan()
+        quest8 = RecoverLostItem()
+
+        quests = [quest1, quest2, quest3, quest4, quest5, quest6, quest7, quest8]
+
+        for i in range(1):
+            location = random.randint(0, len(quests) - 1)
+            self.quests.append(quests.pop(location))
