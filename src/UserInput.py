@@ -12,7 +12,7 @@ class UserInput:
             # Format and print options to the console
             options = ""
             for i in range(self.numbOptions):
-                options += f"[{i + 1}]: {self.optionsList[i]} "
+                options += f"[{i + 1}]{self.optionsList[i]} "
             print(options)
             # Get User Input
             userInput = input("Your choice: ")
