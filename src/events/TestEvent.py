@@ -1,6 +1,5 @@
 from src.Event import Event
 
-
 class TestEvent(Event):
 
     def __init__(self):
