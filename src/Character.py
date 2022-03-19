@@ -6,16 +6,16 @@ from src.UserInput import UserInput
 
 
 class character:
-    def __init__(self,name,description,health):
+    def __init__(self,name,description,health,weaponName="Flimsy Sword"):
         self.weapons = Weapons()
         self.name = name
         self.description = description
         self.health = Health(health)
-        self.equippedItem = self.weapons.getWeaponByName("Flimsy Sword")
+        self.equippedItem = self.weapons.getWeaponByName(weaponName)
         self.inventory = []
 
     def fullDesc(self):
-        return f"{self.name}: {self.description}\n\t\tTheir health is: {self.health.health}"
+        return f"{self.name}: {self.description}\n\t\tTheir starting weapon is: {self.equippedItem} [{self.equippedItem.minDamage}|{self.equippedItem.maxDamage}]"
 
     def __str__(self):
         return self.name
@@ -50,8 +50,8 @@ class character:
         print(f"\nYou have equipped: {chosenItem.name}")
 
     def die(self):
-        print(f"You, {self.name} are dead...")
-        print(f"It is a shame, the world soon after your downfall fell under the control of the CHAOS.")
+        print(f"\nYou, {self.name} are dead...")
+        print(f"\nIt is a shame, the world soon after your downfall fell under the control of the CHAOS.")
         sys.exit()
 
 

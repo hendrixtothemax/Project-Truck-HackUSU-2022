@@ -6,12 +6,11 @@ from UserInput import UserInput
 from src.Game import Game
 
 
-
 def choosecharacter():
     player = ""
-    Tohka = character("Tohka","A strong headed girl with a tendency to shoot first and ask questions later",100)
-    Rimuru = character("Rimuru", "A down-to-earth warrior with only the best for his friends in mind",100)
-    Kurumi = character("Kurumi", "A psychopathic murderer who really loves to kill things.",100)
+    Tohka = character("Tohka","A strong headed girl with a tendency to shoot first and ask questions later",100,"Flimsy Sword")
+    Rimuru = character("Rimuru", "A down-to-earth warrior with only the best for his friends in mind",100,"Broken Greatsword")
+    Kurumi = character("Kurumi", "A psychopathic murderer who really loves to kill things.",100,"Weak Longbow")
 
     prompt = ""
 

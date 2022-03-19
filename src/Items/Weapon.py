@@ -14,6 +14,9 @@ class Weapon(Item):
         damage = random.randint(self.minDamage, self.maxDamage)
         return damage
 
+    def __repr__(self):
+        return self.name
+
     # def __add__(self, other):
     #     return self.determineDamage()
     #
