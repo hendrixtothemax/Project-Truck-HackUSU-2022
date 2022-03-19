@@ -63,6 +63,8 @@ class branch:
 
         self.validquests = [quest1, quest2, quest3, quest4, quest5, quest6, quest7, quest8]
 
+        if floor == 5:
+            self.finalboss(floor)
         self.randomevent(floor)
         time.sleep(1)
         player.health.addHealth(10)
@@ -80,9 +82,8 @@ class branch:
         # print(self.events)
         # print(self.quests)
 
+
     def randomevent(self,floor):
-
-
 
         # Testing Code Line Directly Below
         #self.events.append(events.pop(0))
