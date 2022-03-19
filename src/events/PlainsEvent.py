@@ -24,7 +24,7 @@ class PlainsEvent(Event):
 
     def __init__(self):
         # (eventName, eventDescription)
-        super().__init__("Plains Event")
+        super().__init__("Clear the Plains")
 
     # When Creating New Events, Put Event Code In Here
     def run(self, player,floor):

@@ -25,7 +25,7 @@ class BogEvent(Event):
 
     def __init__(self):
         # (eventName, eventDescription)
-        super().__init__("Bog Event")
+        super().__init__("Clear out the Bog")
 
     # When Creating New Events, Put Event Code In Here
     def run(self, player,floor):

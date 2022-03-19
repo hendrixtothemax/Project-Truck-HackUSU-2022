@@ -24,7 +24,7 @@ class VillaEvent(Event):
 
     def __init__(self):
         # (eventName, eventDescription)
-        super().__init__("Villa Event")
+        super().__init__("Purge the Villa")
 
     # When Creating New Events, Put Event Code In Here
     def run(self, player, floor):

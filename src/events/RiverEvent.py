@@ -24,7 +24,7 @@ class RiverEvent(Event):
 
     def __init__(self):
         # (eventName, eventDescription)
-        super().__init__("River Event")
+        super().__init__("Cleanse the River")
 
     # When Creating New Events, Put Event Code In Here
     def run(self, player,floor):

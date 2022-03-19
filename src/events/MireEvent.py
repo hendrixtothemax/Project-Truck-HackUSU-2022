@@ -24,7 +24,7 @@ class MireEvent(Event):
 
     def __init__(self):
         # (eventName, eventDescription)
-        super().__init__("Mire Event")
+        super().__init__("Search the Mire")
 
     # When Creating New Events, Put Event Code In Here
     def run(self, player,floor):

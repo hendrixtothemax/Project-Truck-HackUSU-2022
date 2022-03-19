@@ -24,7 +24,7 @@ class ForestEvent(Event):
 
     def __init__(self):
         # (eventName, eventDescription)
-        super().__init__("Forest Event")
+        super().__init__("Explore the Forest")
 
     # When Creating New Events, Put Event Code In Here
     def run(self, player,floor):

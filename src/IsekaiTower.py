@@ -33,25 +33,25 @@ def choosecharacter():
 
 def storystart():
     print("It's a nice lovely day you find yourself in. The cars are loud, the children screaming, and the air full to chocking with smoke.")
-    time.sleep(1)
+    time.sleep(3)
     print("As you stride down the crowded, dirty street, you spy an old grandma edging her way across the crosswalk.")
-    time.sleep(1)
+    time.sleep(3)
     print("You glance to the side to see a semi-truck hurtling toward the old, shuffling grandma at close to mach seven. What do you do?")
-    time.sleep(1)
+    time.sleep(3)
     print("1- Sigh and and take a step back to prevent the blood from splattering over your new suit.")
-    time.sleep(1)
+    time.sleep(3)
     print("2- Turn up your music and keep walking.")
-    time.sleep(1)
+    time.sleep(3)
     print("3- Dash heroically out into the street to throw the grandma from harms way.")
-    time.sleep(1)
+    time.sleep(3)
     userInput = UserInput("Type 1, 2, or 3." , 3, ["", "", ""])
     choice1 = userInput.getInput()
     if choice1 == 1:
         time.sleep(1)
         print("The truck barrels through the red light, hitting the poor grandma dead on.")
-        time.sleep(2)
+        time.sleep(3)
         print("You have no time to be amazed as the truck ricochets off the immovable old lady, flips over midair, and lands directly on top of you.")
-        time.sleep(2)
+        time.sleep(3)
         print("You die fifteen minutes later from blood loss. You were in excruciating pain the entire time, blood soaking every inch of your new suit.")
     elif choice1 == 2:
         time.sleep(1)
@@ -62,17 +62,17 @@ def storystart():
     elif choice1 == 3:
         time.sleep(1)
         print("You dash out onto the street, bag forgotten on the sidewalk. Without thinking you shove the grandma forward with impossible strength.")
-        time.sleep(5)
+        time.sleep(3)
         print("She flies to the other side of the street. You stumble, look to the side.")
-        time.sleep(4)
+        time.sleep(3)
         print("The truck hits you, killing you instantly")
         time.sleep(3)
         print("The grandma blesses your name for the rest of her short life.")
 
     else:
-        time.sleep(1)
+        time.sleep(3)
         print("You hesitate as the truck flies through the red light. Your mind goes blank.")
-        time.sleep(2)
+        time.sleep(3)
         print("Which is probably why you are not fast enough to dodge when the truck swerves and slams into you, killing you instantly")
 
 
@@ -87,27 +87,27 @@ def towerstart(player):
     print("\t\t\t|\n")
 
     print("Good Morning " + str(player) + "! Congratulations, you have died.\n")
-    time.sleep(1)
+    time.sleep(3)
     print("Oh, don't be so confused. I'll break it all down for you!")
-    time.sleep(1)
+    time.sleep(3)
     print("First, this is no longer your world. You have been reincarnated as " + str(player) + " in a new world full of magic and evil demons\n")
-    time.sleep(1)
+    time.sleep(3)
     print("\tSpecifically, this world is a TOWER. Each floor in this tower has a series of QUESTS and SIDE QUESTS to complete. \n\tTo progress, one must complete these quests.")
-    time.sleep(1)
+    time.sleep(3)
     print("\tAt the end of each floor resides a FLOOR BOSS which you must beat to continue on to the next floor.")
-    time.sleep(1)
+    time.sleep(3)
     print("\tOnce you beat all the floor bosses, you can confront the FINAL BOSS, the Demon Lord.")
-    time.sleep(1)
+    time.sleep(3)
     print("\tFailure to beat this foul beast will result in the rapid deconstruction of the entire universe.")
-    time.sleep(1)
+    time.sleep(3)
     print("\nI'm afraid time is running short " + str(player) + ", best hurry onward.")
 
     print("\n----------\n")
 
     print("You find yourself standing in the middle of a town crowded to breaking with people. You can hardly walk two steps without knocking someone over.")
-    time.sleep(1)
+    time.sleep(3)
     print("You wade through the crowd to the side of the street where you find a large wooden board with the words 'AVAILABLE QUESTS' written at the top.")
-    time.sleep(1)
+    time.sleep(3)
     print("Beneath those words, you see FOUR pieces of paper pegged to the wood, labeled...")
 
 
@@ -119,10 +119,10 @@ def floorlayout():
 
 
 #Chain of Events
-#storystart()
+storystart()
 game = Game()
 player = choosecharacter()
 game.setPlayer(player)
-#time.sleep(3)
+time.sleep(3)
 towerstart(player)
 floorlayout()

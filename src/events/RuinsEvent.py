@@ -24,7 +24,7 @@ class RuinsEvent(Event):
 
     def __init__(self):
         # (eventName, eventDescription)
-        super().__init__("Ruins Event")
+        super().__init__("Clear out the Ruins")
 
     # When Creating New Events, Put Event Code In Here
     def run(self, player,floor):

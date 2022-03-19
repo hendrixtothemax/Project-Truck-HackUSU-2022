@@ -26,7 +26,7 @@ class BeachEvent(Event):
 
     def __init__(self):
         # (eventName, eventDescription)
-        super().__init__("Beach Event")
+        super().__init__("Secure the Beach")
 
     # When Creating New Events, Put Event Code In Here
     def run(self, player,floor):

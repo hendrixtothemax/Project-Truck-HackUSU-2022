@@ -24,7 +24,7 @@ class CliffsEvent(Event):
 
     def __init__(self):
         # (eventName, eventDescription)
-        super().__init__("Cliffs Event")
+        super().__init__("Scout the Cliffs")
 
     # When Creating New Events, Put Event Code In Here
     def run(self, player,floor):
