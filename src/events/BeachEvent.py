@@ -1,5 +1,9 @@
+from src.Combat import Combat
 from src.Event import Event
 import time
+
+from src.F1enemies.Zombie import Zombie
+
 
 class BeachEvent(Event):
 
@@ -13,5 +17,8 @@ class BeachEvent(Event):
         time.sleep(2)
         print("You narrow your eyes at a dark form in the sand. It begins to move...")
         #initiate combat
+        possibleEnemies = [Zombie()]
+        combat = Combat(player, possibleEnemies, 2)
+        combat.start()
 
 
