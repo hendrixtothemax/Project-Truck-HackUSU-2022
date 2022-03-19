@@ -6,6 +6,7 @@ class character:
         self.name = name
         self.description = description
         self.health = Health(health)
+        self.equippedItem = ""
 
     def fullDesc(self):
         return f"{self.name}: {self.description}\n\t\tTheir health is: {self.health.health}"
