@@ -5,9 +5,9 @@ from Character import character
 
 
 def choosecharacter():
-    Tohka = character("Tohka","A strong headed girl with a tendency to shoot first and ask questions later")
-    Rimuru = character("Rimuru", "A down-to-earth warrior with only the best for his friends in mind")
-    Kurumi = character("Kurumi", "A psychopathic murderer who really loves to kill things.")
+    Tohka = character("Tohka","A strong headed girl with a tendency to shoot first and ask questions later",100)
+    Rimuru = character("Rimuru", "A down-to-earth warrior with only the best for his friends in mind",100)
+    Kurumi = character("Kurumi", "A psychopathic murderer who really loves to kill things.",100)
     print("Hello player! Please choose a character from below")
     print("1- " , end= " ")
     Tohka.status()
@@ -15,6 +15,8 @@ def choosecharacter():
     Rimuru.status()
     print("3- " , end= " ")
     Kurumi.status()
+    print("Choose 1, 2, or 3.")
+    input()
 
 
 
