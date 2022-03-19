@@ -1,12 +1,11 @@
 import random
 
 
-class event:
-
-    def __init__(self,name,description):
+class Event:
+    def __init__(self, name, desc):
         print("INIT Event")
         self.name = name
-        self.description = description
+        self.desc = desc
 
     
 

@@ -44,4 +44,3 @@ class Health:
     def subArmor(self, subArmor):
         proposedNewArmor = self.armor - subArmor
         self.health = proposedNewArmor
-        
