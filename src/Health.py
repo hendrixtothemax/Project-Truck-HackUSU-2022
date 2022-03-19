@@ -5,23 +5,17 @@ class Health:
     armor = 0
     maxArmor = 0
 
-    def __init__(self, maxHealth, maxArmor, health, armor):
+    def __init__(self, maxHealth=100, maxArmor=0, health=None, armor=None):
         self.maxHealth = maxHealth
         self.maxArmor = maxArmor
-        self.armor = armor
-        self.health = health
-
-    def __init__(self, maxHealth, maxArmor, health):
-        self.__init__(maxHealth, maxArmor, health, maxArmor)
-
-    def __init__(self, maxHealth, maxArmor):
-        self.__int__(maxHealth, maxArmor, maxHealth)
-
-    def __int__(self, maxHealth):
-        self.__init__(maxHealth, 0)
-
-    def __init__(self):
-        self.__int__(100)
+        if health is None:
+            self.health = self.maxHealth
+        else:
+            self.health = health
+        if armor is None:
+            self.armor = self.maxArmor
+        else:
+            self.armor = armor
 
     def addHealth(self, addHealth):
         proposedNewHealth = self.health + addHealth
