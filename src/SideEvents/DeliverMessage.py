@@ -11,7 +11,7 @@ class DeliverMessage(Event):
         super().__init__("Deliver Message")
 
     # When Creating New Events, Put Event Code In Here
-    def run(self, player):
+    def run(self, player,floor):
         print("A frantic young girl nearly collides with you as you round a bend in the road. She tumbles to the ground, dropping a bunch of letters.")
         time.sleep(2)
         print("Panicked, she starts to gather the letters, nearly crushing the papers in her fists.")

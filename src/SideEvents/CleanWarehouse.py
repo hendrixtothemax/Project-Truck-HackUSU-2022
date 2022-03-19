@@ -11,7 +11,7 @@ class CleanWarehouse(Event):
         super().__init__("Clean Warehouse")
 
     # When Creating New Events, Put Event Code In Here
-    def run(self, player):
+    def run(self, player,floor):
         print("The small port in this town is very old and hardly used. You pass by a sunken warehouse in terrible condition, dirt and grim covering every wall.")
         time.sleep(2)
         print("You spot a small woman scrubbing away at the grim. It seems like she's been there for hours.")

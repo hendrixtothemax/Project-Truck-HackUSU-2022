@@ -3,7 +3,7 @@ from src.Enemy import Enemy
 
 class ChildLich(Enemy):
     def __init__(self):
-        name = "ChildLich"
+        name = "Child Lich"
         desc = "A small, barley formed or trained lich capable of small necromantic feats."
         health = 10
         floor = 0

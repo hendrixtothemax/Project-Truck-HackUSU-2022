@@ -11,7 +11,7 @@ class HelpBartender(Event):
         super().__init__("Help Bartender")
 
     # When Creating New Events, Put Event Code In Here
-    def run(self, player):
+    def run(self, player,floor):
         print("You enter one of your favorite taverns and sit down at the bar. The bartender, a burly woman with massive, cord-like arms smiles grimly.")
         time.sleep(2)
         print("She informs you that her daughter was sick and could not serve drinks like she usually does. She offers three weeks of free drinks if you wait tables for the night.")

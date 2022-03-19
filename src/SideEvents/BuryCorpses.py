@@ -11,7 +11,7 @@ class BuryCorpses(Event):
         super().__init__("BuryCorpses")
 
     # When Creating New Events, Put Event Code In Here
-    def run(self, player):
+    def run(self, player,floor):
         print("As you shufle down the road, a weary soldier hails you from a ways off. He holds a shovle and wears a white bandana tied around his face.")
         time.sleep(2)
         print("There are corpses littered all around him, cut down not too long ago. What do you do?")

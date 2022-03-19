@@ -11,7 +11,7 @@ class CatchPigs(Event):
         super().__init__("Catch Pigs")
 
     # When Creating New Events, Put Event Code In Here
-    def run(self, player):
+    def run(self, player,floor):
         print("You pass by a farmhouse, the wail of children and the general din of animals filling the air.")
         time.sleep(2)
         print("A farmer spots you and waves his arms desperately, a horror filled look on his face.")

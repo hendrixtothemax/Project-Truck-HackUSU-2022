@@ -11,7 +11,7 @@ class HelpOldMan(Event):
         super().__init__("Help Old Man")
 
     # When Creating New Events, Put Event Code In Here
-    def run(self, player):
+    def run(self, player,floor):
         print("You see an old crippled man on the side of the road holding out a tin cup. An odd place for a beggar.")
         time.sleep(2)
         print("He seems to be sick or ailed in some way.")

@@ -11,7 +11,7 @@ class RecoverLostItem(Event):
         super().__init__("Recover Lost Item")
 
     # When Creating New Events, Put Event Code In Here
-    def run(self, player):
+    def run(self, player,floor):
         print("A woman sorts through the piles of trash outside her home. She appears completely panicked and desperate.")
         time.sleep(2)
         print("You scratch your head, wondering what it is she is doing.")

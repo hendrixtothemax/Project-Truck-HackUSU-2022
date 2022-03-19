@@ -62,15 +62,15 @@ class branch:
 
         self.validquests = [quest1, quest2, quest3, quest4, quest5, quest6, quest7, quest8]
 
-        #self.randomevent()
+        self.randomevent(floor)
         time.sleep(3)
-        self.randomsidequest()
-        #self.randomevent()
+        self.randomsidequest(floor)
+        self.randomevent(floor)
         self.floorboss(floor)
         # print(self.events)
         # print(self.quests)
 
-    def randomevent(self):
+    def randomevent(self,floor):
 
 
 
@@ -87,13 +87,13 @@ class branch:
         userInput = UserInput("Type 1, 2, 3, or 4 to choose a quest.", 4, [self.events[0], self.events[1],self.events[2],self.events[3]])
         choice1 = userInput.getInput()
         if choice1 == 1:
-            self.events[0].run(self.player)
+            self.events[0].run(self.player,floor)
         elif choice1 ==2:
-            self.events[1].run(self.player)
+            self.events[1].run(self.player,floor)
         elif choice1 == 3:
-            self.events[2].run(self.player)
+            self.events[2].run(self.player,floor)
         elif choice1 == 4:
-            self.events[3].run(self.player)
+            self.events[3].run(self.player,floor)
 
         self.events = []
 
@@ -103,7 +103,7 @@ class branch:
         # for event in self.events:
         #     event.run(self.player)
 
-    def randomsidequest(self):
+    def randomsidequest(self,floor):
 
 
         #test like above
@@ -113,7 +113,7 @@ class branch:
             location = random.randint(0, len(self.validquests) - 1)
             self.quests.append(self.validquests.pop(location))
 
-        self.quests[location].run(self.player)
+        self.quests[location].run(self.player,floor)
 
         self.quests = []
 

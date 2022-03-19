@@ -1,5 +1,5 @@
-from random import Random
-
+import random
+import time
 from src.UserInput import UserInput
 
 from copy import deepcopy
@@ -23,8 +23,8 @@ class Combat:
         for i in range(self.numbEnemies):
             maxIndex = len(possibleEnemyList) - 1
             index = 0
-            if not maxIndex < 1:
-                index = Random.randint(0, maxIndex)
+            if not (maxIndex < 1):
+                index = random.randint(0, maxIndex)
             enemies.append(deepcopy(possibleEnemyList[index]))
         return enemies
 
@@ -33,12 +33,20 @@ class Combat:
 
         print("")
         for enemy in self.enemies:
+            time.sleep(2)
             print(f"{enemy.approach()}")
+            time.sleep(2)
 
         print("\n!COMBAT HAS STARTED!")
         while combatActive:
             self.playerTurn()
             self.enemyTurn()
+            if len(self.enemies) < 1:
+                break
+        print("\n!COMBAT HAS ENDED!")
+        #GIVE WEAPON
+        print("\n")
+        print("You flee the scene.")
 
     def playerTurn(self):
         turnActive = True
@@ -80,7 +88,7 @@ class Combat:
         userInput = inputObj.getInput()
         if userInput == 1:
             return
-        playerDamage = 1
+        playerDamage = 99
         chosenEnemy = self.enemies[userInput-2]
         chosenEnemy.health.subHealth(playerDamage)
         print(f"\n{chosenEnemy.name} has taken {playerDamage} points of damage! {chosenEnemy.health.healthReadout()}")

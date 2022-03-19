@@ -11,7 +11,7 @@ class DiscoverChest(Event):
         super().__init__("Discover Chest")
 
     # When Creating New Events, Put Event Code In Here
-    def run(self, player):
+    def run(self, player,floor):
         print("You pick up a map laying on the side of the road. A large, flamboyant X marks a spot not too far from this very location.")
         time.sleep(2)
         print("You look around for who might have dropped such an obviously valuable piece of information. You see no one.")
