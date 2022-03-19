@@ -13,15 +13,13 @@ class Enemy:
         self.maxDamage = maxDamage
 
     def approach(self):
-        return f"A {self.name} approaches you. {self.desc} Their health is: {self.health.health}"
+        return f"A {self.name} approaches you. {self.desc} Their health is: {self.health.healthReadout()}"
 
     def __str__(self):
         return self.name
 
     def determineDamage(self):
-        print(self.minDamage)
-        print(self.maxDamage)
-        damage = Random.randint(self.minDamage, self.maxDamage)
+        damage = random.randint(self.minDamage, self.maxDamage)
         return damage
 
     def attack(self, player):

@@ -29,7 +29,12 @@ class Combat:
 
     def start(self):
         combatActive = True;
-        print("\n!COMBAT HAS STARTED!\n")
+
+        print("")
+        for enemy in self.enemies:
+            print(f"{enemy.approach()}")
+
+        print("\n!COMBAT HAS STARTED!")
         while combatActive:
             self.playerTurn()
             self.enemyTurn()
@@ -38,17 +43,17 @@ class Combat:
         turnActive = True
         while turnActive:
             # Have TUI for User to Interact with
-            inputObj = UserInput("What will you do?", len(self.__COMBAT_GUI), self.__COMBAT_GUI)
+            inputObj = UserInput("\nWhat will you do?", len(self.__COMBAT_GUI), self.__COMBAT_GUI)
             userInput = inputObj.getInput()
             if userInput == 1:
                 # List Enemies
                 print("\nEnemies:")
                 for enemy in self.enemies:
-                    print(f"\t{enemy.name}: {enemy.health.healthReadout()}")
-                print("")
+                    print(f"\t{enemy.name} {enemy.health.healthReadout()}")
             elif userInput == 2:
                 # Attack TUI
                 self.playerAttackTUI()
+                turnActive = False
             elif userInput == 3:
                 # View Inventory
                 print("Inventory Is Not Implemented!")
@@ -67,15 +72,17 @@ class Combat:
     def playerAttackTUI(self):
         TUIOptions = ["Cancel"]
         for enemy in self.enemies:
-            TUIOptions.append(enemy.name)
-        userInput = UserInput("Who do you attack?",len(TUIOptions),TUIOptions)
+            enemyReadout = f"{enemy.name} {enemy.health.healthReadout()}"
+            TUIOptions.append(enemyReadout)
+        inputObj = UserInput("\nWho do you attack?",len(TUIOptions),TUIOptions)
+        userInput = inputObj.getInput()
         if userInput == 1:
             return
         playerDamage = 1
         chosenEnemy = self.enemies[userInput-2]
+        print(f"\n{chosenEnemy.name} has taken {playerDamage} points of damage!")
         chosenEnemy.health.subHealth(playerDamage)
         if chosenEnemy.health.health < 0:
             print(f"The {chosenEnemy.name} has died!")
             self.enemies.pop(userInput-2)
-        else:
-            print(f"{chosenEnemy.name}")
+        print("")
