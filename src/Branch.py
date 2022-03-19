@@ -1,4 +1,5 @@
 import random
+import time
 
 from src.SideEvents.BuryCorpses import BuryCorpses
 from src.SideEvents.CatchPigs import CatchPigs
@@ -28,13 +29,6 @@ class branch:
         self.player = player
         self.events = []
         self.quests = []
-        self.randomevent()
-        self.randomsidequest()
-        self.randomevent()
-        # print(self.events)
-        # print(self.quests)
-
-    def randomevent(self):
 
         event1 = BeachEvent()
         event2 = BogEvent()
@@ -49,14 +43,36 @@ class branch:
         event11 = RuinsEvent()
         event12 = VillaEvent()
 
-        events = [event1, event2, event3, event4, event5, event6, event7, event8, event9, event10, event11, event12]
+        self.validevents = [event1, event2, event3, event4, event5, event6, event7, event8, event9, event10, event11, event12]
+
+        quest1 = BuryCorpses()
+        quest2 = CatchPigs()
+        quest3 = CleanWarehouse()
+        quest4 = DeliverMessage()
+        quest5 = DiscoverChest()
+        quest6 = HelpBartender()
+        quest7 = HelpOldMan()
+        quest8 = RecoverLostItem()
+
+        self.validquests = [quest1, quest2, quest3, quest4, quest5, quest6, quest7, quest8]
+
+        self.randomevent()
+        time.sleep(3)
+        self.randomsidequest()
+        self.randomevent()
+        # print(self.events)
+        # print(self.quests)
+
+    def randomevent(self):
+
+
 
         # Testing Code Line Directly Below
         #self.events.append(events.pop(0))
 
         for i in range(4):
-            location = random.randint(0, len(events) - 1)
-            self.events.append(events.pop(location))
+            location = random.randint(0, len(self.validevents) - 1)
+            self.events.append(self.validevents.pop(location))
 
         print("You look at the QUEST postings to see what is available.")
 
@@ -72,6 +88,8 @@ class branch:
         elif choice1 == 4:
             self.events[3].run(self.player)
 
+        self.events = []
+
         #Testing Code Line Directly Below
         #self.events[0].run(self.player)
 
@@ -79,25 +97,18 @@ class branch:
         #     event.run(self.player)
 
     def randomsidequest(self):
-        quest1 = BuryCorpses()
-        quest2 = CatchPigs()
-        quest3 = CleanWarehouse()
-        quest4 = DeliverMessage()
-        quest5 = DiscoverChest()
-        quest6 = HelpBartender()
-        quest7 = HelpOldMan()
-        quest8 = RecoverLostItem()
 
-        quests = [quest1, quest2, quest3, quest4, quest5, quest6, quest7, quest8]
 
         #test like above
         #self.quests.append(quests.pop(0))
 
-        for i in range(len(quests)):
-            location = random.randint(0, len(quests) - 1)
-            quests.append(quests.pop(location))
+        for i in range(len(self.validquests)):
+            location = random.randint(0, len(self.validquests) - 1)
+            self.quests.append(self.validquests.pop(location))
 
-        quests[location].run(self.player)
+        self.quests[location].run(self.player)
+
+        self.quests = []
 
         #test like above
         #self.quests[0].run(self.player)
