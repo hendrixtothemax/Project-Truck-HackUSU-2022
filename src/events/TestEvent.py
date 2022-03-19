@@ -8,5 +8,6 @@ class TestEvent(Event):
         super().__init__("Test Event 1")
 
     # When Creating New Events, Put Event Code In Here
-    def run(self):
+    def run(self, player):
         print("testing!" + self.name)
+        print(str(player))
