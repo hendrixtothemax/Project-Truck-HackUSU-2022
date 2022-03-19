@@ -44,6 +44,8 @@ class branch:
             location = random.randint(0, len(events) - 1)
             self.events.append(events.pop(location))
 
+        #Testing Code Line Directly Below
+        self.events[0].run(self.player)
 
         # for event in self.events:
         #     event.run(self.player)
