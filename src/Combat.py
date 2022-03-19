@@ -52,10 +52,23 @@ class Combat:
 
     def enemyTurn(self):
         for enemy in self.enemies:
-            enemy.attack(self)
+            enemy.attack(self.player)
             if self.player.health.health < 0:
                 print("YOU SHOULD BE DEAD")
         print(f"\nYour health: {self.player.health.healthReadout()}")
 
     def playerAttackTUI(self):
-        pass
+        TUIOptions = ["Cancel"]
+        for enemy in self.enemies:
+            TUIOptions.append(enemy.name)
+        userInput = UserInput("Who do you attack?",len(TUIOptions),TUIOptions)
+        if userInput == 1:
+            return
+        playerDamage = 1
+        chosenEnemy = self.enemies[userInput-2]
+        chosenEnemy.health.subHealth(playerDamage)
+        if chosenEnemy.health.health < 0:
+            print(f"The {chosenEnemy.name} has died!")
+            self.enemies.pop(userInput-2)
+        else:
+            print(f"{chosenEnemy.name}")
