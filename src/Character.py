@@ -41,5 +41,9 @@ class character:
         for i in range():
             emptyStrings.append("")
         inputObj = UserInput("",len(self.inventory),emptyStrings)
+        userInput = inputObj.getInput()
+        chosenItem = self.inventory[userInput-1]
+        self.setWeapon(chosenItem)
+        print(f"\nYou have equipped: {chosenItem.name}")
 
 
