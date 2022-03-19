@@ -40,5 +40,7 @@ class HelpBartender(Event):
                 print("You wait tables, but nothing more. The innkeeper keeps her word for three weeks of free drinks. You'll be sure to come by often.")
         elif choice1 == 2:
             print("You continue on your way, nothing but the end goal in mind.")
+            time.sleep(2)
 
         print("You head back to the starter town.")
+        time.sleep(2)

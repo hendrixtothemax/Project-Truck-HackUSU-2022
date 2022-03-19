@@ -40,5 +40,7 @@ class CatchPigs(Event):
                 print("You scoff and turn from the old man. He can catch his own pig.")
         elif choice1 == 2:
             print("You continue on your way, nothing but the end goal in mind.")
+            time.sleep(2)
 
         print("You head back to the starter town.")
+        time.sleep(2)

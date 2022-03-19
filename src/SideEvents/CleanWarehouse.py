@@ -12,6 +12,7 @@ class CleanWarehouse(Event):
 
     # When Creating New Events, Put Event Code In Here
     def run(self, player,floor):
+        self.player = player
         print("The small port in this town is very old and hardly used. You pass by a sunken warehouse in terrible condition, dirt and grim covering every wall.")
         time.sleep(2)
         print("You spot a small woman scrubbing away at the grim. It seems like she's been there for hours.")
@@ -36,10 +37,14 @@ class CleanWarehouse(Event):
                 time.sleep(2)
                 print("After a few hours of good work, everything is finished. You start to head off when she stops you, handing you something.")
                 time.sleep(2)
-                # add weapon n+1 to inventory
+                weapon = self.player.weapons.getRandomWeaponByLevel(str(self.floor + 1))
+                self.player.addItemToInventory(weapon)
+                print(f"{weapon.name} has been added to your inventory!")
             elif choice2 == 2:
                 print("She stares after you, a confused look on her face.")
         elif choice1 == 2:
             print("You continue on your way, nothing but the end goal in mind.")
+            time.sleep(2)
 
         print("You head back to the starter town.")
+        time.sleep(2)

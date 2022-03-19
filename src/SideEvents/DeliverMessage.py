@@ -40,5 +40,7 @@ class DeliverMessage(Event):
                 print("You march away from the girl, leaving her to deliver the letters on her own.")
         elif choice1 == 2:
             print("You continue on your way, nothing but the end goal in mind.")
+            time.sleep(2)
 
         print("You head back to the starter town.")
+        time.sleep(2)

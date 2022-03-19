@@ -11,7 +11,8 @@ class BuryCorpses(Event):
         super().__init__("BuryCorpses")
 
     # When Creating New Events, Put Event Code In Here
-    def run(self, player,floor):
+    def run(self,player,floor):
+        self.player = player
         print("As you shufle down the road, a weary soldier hails you from a ways off. He holds a shovle and wears a white bandana tied around his face.")
         time.sleep(2)
         print("There are corpses littered all around him, cut down not too long ago. What do you do?")
@@ -36,10 +37,15 @@ class BuryCorpses(Event):
                 time.sleep(2)
                 print("You set the shovel down and make to leave, but he stops you and hands you something.")
                 time.sleep(2)
-                #add weapon n+1 to inventory
+                weapon = self.player.weapons.getRandomWeaponByLevel(str(self.floor+1))
+                self.player.addItemToInventory(weapon)
+                print(f"{weapon.name} has been added to your inventory!")
+                time.sleep(2)
             elif choice2 == 2:
                     print("The soldier looks at you knowingly and lets you walk away. You continue on your way.")
         elif choice1 == 2:
             print("You continue on your way, nothing but the end goal in mind.")
+            time.sleep(2)
 
         print("You head back to the starter town.")
+        time.sleep(2)

@@ -12,6 +12,7 @@ class HelpOldMan(Event):
 
     # When Creating New Events, Put Event Code In Here
     def run(self, player,floor):
+        self.player = player
         print("You see an old crippled man on the side of the road holding out a tin cup. An odd place for a beggar.")
         time.sleep(2)
         print("He seems to be sick or ailed in some way.")
@@ -36,10 +37,14 @@ class HelpOldMan(Event):
                 time.sleep(2)
                 print("He pulls out a large chest and opens it. From within, he withdraws and item and hands it to you.")
                 time.sleep(2)
-                # add weapon n+1 to inventory
+                weapon = self.player.weapons.getRandomWeaponByLevel(str(self.floor + 1))
+                self.player.addItemToInventory(weapon)
+                print(f"{weapon.name} has been added to your inventory!")
             elif choice2 == 2:
                 print("The old man sighs softly as you leave.")
         elif choice1 == 2:
             print("You continue on your way, nothing but the end goal in mind.")
+            time.sleep(2)
 
         print("You head back to the starter town.")
+        time.sleep(2)

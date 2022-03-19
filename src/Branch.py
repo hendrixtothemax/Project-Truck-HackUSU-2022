@@ -122,20 +122,32 @@ class branch:
 
 
     def floorboss(self,floor):
-        print("yadda yadda")
+        print("After finishing off more than a few of the Demon Lord's underlings, you find yourself drawn to a tower you had not noticed before.")
+        time.sleep(2)
+        print("You stride confidently up to the front door, fear a distant thing. Mist swirls around your ankles and the door groans loudly as you enter.")
+        time.sleep(2)
+        print("\n")
+        print("YOU HAVE ENTERED THE DOMAIN OF THE FLOOR BOSS")
+        time.sleep(2)
+        print("YOU MUST DEFEAT IT TO ADVANCE TO THE NEXT FLOOR")
         if floor == 1:
             possibleEnemies = [Aqua()]
-            combat = Combat(self.player, possibleEnemies, 1)
+            combat = Combat(self.player, possibleEnemies, 1,floor)
             combat.start()
         elif floor == 2:
             possibleEnemies = [Rem()]
-            combat = Combat(self.player, possibleEnemies, 1)
+            combat = Combat(self.player, possibleEnemies, 1,floor)
             combat.start()
         elif floor == 3:
             possibleEnemies = [Megumin()]
-            combat = Combat(self.player, possibleEnemies, 1)
+            combat = Combat(self.player, possibleEnemies, 1,floor)
             combat.start()
         elif floor == 4:
             possibleEnemies = [Ram()]
-            combat = Combat(self.player, possibleEnemies, 1)
+            combat = Combat(self.player, possibleEnemies, 1,floor)
             combat.start()
+        print("\n")
+        print("YOU HAVE DEFEATED THE FLOOR BOSS")
+        time.sleep(2)
+        print("YOU ADVANCE TO THE NEXT FLOOR")
+        self.floor += 1

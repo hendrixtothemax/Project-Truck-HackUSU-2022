@@ -12,6 +12,7 @@ class DiscoverChest(Event):
 
     # When Creating New Events, Put Event Code In Here
     def run(self, player,floor):
+        self.player = player
         print("You pick up a map laying on the side of the road. A large, flamboyant X marks a spot not too far from this very location.")
         time.sleep(2)
         print("You look around for who might have dropped such an obviously valuable piece of information. You see no one.")
@@ -36,10 +37,14 @@ class DiscoverChest(Event):
                 time.sleep(2)
                 print("Nothing happens. Relieved, you reach inside and pull out what's within.")
                 time.sleep(2)
-                # add weapon n+1 to inventory
+                weapon = self.player.weapons.getRandomWeaponByLevel(str(self.floor + 1))
+                self.player.addItemToInventory(weapon)
+                print(f"{weapon.name} has been added to your inventory!")
             elif choice2 == 2:
                 print("You turn on your heel and sprint away. No way are you opening something that's so obviously a trap")
         elif choice1 == 2:
             print("You continue on your way, nothing but the end goal in mind.")
+            time.sleep(2)
 
         print("You head back to the starter town.")
+        time.sleep(2)

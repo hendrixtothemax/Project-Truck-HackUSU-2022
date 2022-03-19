@@ -36,10 +36,11 @@ class RecoverLostItem(Event):
                 time.sleep(2)
                 print("You find the ring lodged in some metal piping at the bottom and she thanks you close to a thousand times before rushing back inside.")
                 time.sleep(2)
-                # add weapon n+1 to inventory
             elif choice2 == 2:
                 print("You walk away, leaving the woman to her hysteria.")
         elif choice1 == 2:
             print("You continue on your way, nothing but the end goal in mind.")
+            time.sleep(2)
 
         print("You head back to the starter town.")
+        time.sleep(2)
