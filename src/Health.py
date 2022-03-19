@@ -34,3 +34,14 @@ class Health:
         proposedNewHealth = self.health - subHealth
         self.health = proposedNewHealth
 
+    def addArmor(self, addArmor):
+        proposedNewArmor = self.armor + addArmor
+        if proposedNewArmor > self.maxArmor:
+            self.armor = self.maxArmor
+        else:
+            self.armor = proposedNewArmor
+
+    def subArmor(self, subArmor):
+        proposedNewArmor = self.armor - subArmor
+        self.health = proposedNewArmor
+        
