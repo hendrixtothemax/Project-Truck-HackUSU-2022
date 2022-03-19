@@ -15,7 +15,7 @@ def choosecharacter():
 
     print("\n\n")
     print("Hello player! Please choose a character from below")
-    time.sleep(3)
+    time.sleep(1)
     prompt += f"1- {Tohka.fullDesc()}\n"
     prompt += f"2- {Rimuru.fullDesc()}\n"
     prompt += f"3- {Kurumi.fullDesc()}"
@@ -105,7 +105,7 @@ def towerstart(player):
     time.sleep(1)
     print("You wade through the crowd to the side of the street where you find a large wooden board with the words 'AVAILABLE QUESTS' written at the top.")
     time.sleep(1)
-    print("Beneath those words, you see FOUR pieces of paper pegged to the wood.")
+    print("Beneath those words, you see FOUR pieces of paper pegged to the wood, labeled...")
     branch()
 
 
