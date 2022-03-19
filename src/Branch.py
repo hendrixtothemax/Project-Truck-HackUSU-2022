@@ -2,6 +2,7 @@ import random
 import time
 
 from src.Combat import Combat
+from src.FinalBoss.DemonLord import DemonLord
 from src.FloorBosses.F1Boss import Aqua
 from src.FloorBosses.F2Boss import Rem
 from src.FloorBosses.F3Boss import Megumin
@@ -172,3 +173,9 @@ class branch:
         time.sleep(2)
         print("You walk into the town, a sense of familiarity growing around you.")
 
+
+    def finalboss(self,floor):
+        if floor == 5:
+            possibleEnemies = [DemonLord()]
+            combat = Combat(self.player, possibleEnemies, 1, floor, True)
+            combat.start()
