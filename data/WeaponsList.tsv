@@ -1,34 +1,34 @@
 Weapon Name	Description	Type (0-3)	Low Damage	High Damage	Level (0-5)
-Flimsy Sword	A flimsy sword held together by the hopes and dreams of beginning adventurers. A stick might prove more deadly. 	0	1	4	0
-Broken Greatsword	A large hunk of metal seemingly torn right from the ground. It looks more like a shield than a sword...	0	2	5	0
-Sad Shortbow	This is a bow... at least that's what people tell you. It looks more like a stick wth string tied to it than anything else. 	1	2	4	0
-Weak Longbow	A bow that can most likely shoot something a half dozen paces away. Given a great deal of luck and a tail wind. 	1	2	5	0
-Spear	A stick with a hunk of metal at the end. It looks like there was supposed to be a sharp point there...	0	2	6	0
-Handaxe	A small hatchet that can dual as a hammer. 	0	3	5	0
-Javelin	A stick with a hunk of metal at the end. It looks like... a spear? Or is it shorter...?	0	3	5	0
-Light Hammer	A hammer without the qualities that make it an effective weapon. Who needs a light hammer anyway?	0	3	6	0
-Dagger 	A glorified letter opener.	0	3	4	0
-Sickle	A curved weapon that might be sharp enough to shave with. Sure is good at cutting stalks of wheat. 	0	7	10	1
-Trident	A fork. A really big fork. 	0	8	11	1
-Mace	A club on steriods. 	0	7	12	1
-Smith's Hammer	A real hammer that might do some damage. 	0	6	12	1
-Glaive	A spear...? A sword...? Both in one?	0	8	11	1
-Bowstaff	A stout stick of wood hungry for bashed in some skulls. 	0	7	12	1
-Crossbow	A deadly weapon from a distance. 	1	15	20	2
-Great Bow	A large bow of incredible material that is quite accurate... given a skilled shooter. 	1	16	21	2
-Explosive Staff	A strangley shaped staff once wielded by a the Arch Wizard of the Crimosn Magic clan with a pointy hat. Rumor has it she screamed "Exlposion!" when firing off her deadly magic. She could only use it once....	2	15	23	2
-Heavy Crossbow	An extremly versitlie yet deadly ranged weapon. Assassins favor this for it's almost guarrenteed kill. 	1	16	23	2
-Hand Cannon	A gun? In my Isekai fantasy world?!	1	17	21	2
-Bastard Sword	A large and very dangerous sword. Sharp enough to shave with... given you can lift it above your shoulders. 	0	18	23	2
-Katana	The lightests of swords yet holds the deadliest edge. In the hands of a master few can stand against this blade. 	0	25	34	3
-Nichirin Cleavers	Demons stand no chance against these two cleaver-like swords held together by an indestructable chain. 	0	26	35	3
-Arm Crossbow	A surprisingly powerful weapon for one so small. Perfect for assassination or just feeling cool. 	1	27	36	3
-Dual Glaive	A tall spear with long single edged blades on either end. The best of a sword and the bowstaff. 	0	26	35	3
-Sandalphon	An incredibly powerful sword that can emit immense bursts of magic capable of leveling cities. It's scabbard is the throne of a dead god which falls back to the Astral realm after use. 	3	55	70	4
-Zafkiel	A time manipulating pistol that grants powers of a darker sort...	2	57	71	4
-Camael	A spirit of flame that possess the body of the owner. Grants the ability to manipulate flames at will which can melt through titanium. 	2	56	73	4
-Diarmuid and Duibhne 	Dual spears with the ability to cancel other magic and permenently curse the oppenents. 	0	81	96	5
-Excalibur 	It is a weapon of directive energy that converts the magical energy of the wielder into light by accelerating it with her factor of the dragon, intensifying the kinetic energy by convergence and acceleration, allowing for the use of Divine Spirit-level thaumaturgy.	3	84	99	5
-Gae Bolg	The 'result' and the 'action' delievered by the spear are reversed in order such that if the wielder attacks, the blade has already hit it's mark. 	3	82	97	5
-Ea		3	85	100	5
-Dragnipur		0	83	98	5
+Flimsy Sword	A flimsy sword held together by the hopes and dreams of beginning adventurers. A stick might prove more deadly. 	0	1	4	1
+Broken Greatsword	A large hunk of metal seemingly torn right from the ground. It looks more like a shield than a sword...	0	2	5	1
+Sad Shortbow	This is a bow... at least that's what people tell you. It looks more like a stick wth string tied to it than anything else. 	1	2	4	1
+Weak Longbow	A bow that can most likely shoot something a half dozen paces away. Given a great deal of luck and a tail wind. 	1	2	5	1
+Spear	A stick with a hunk of metal at the end. It looks like there was supposed to be a sharp point there...	0	2	6	1
+Handaxe	A small hatchet that can dual as a hammer. 	0	3	5	1
+Javelin	A stick with a hunk of metal at the end. It looks like... a spear? Or is it shorter...?	0	3	5	1
+Light Hammer	A hammer without the qualities that make it an effective weapon. Who needs a light hammer anyway?	0	3	6	1
+Dagger 	A glorified letter opener.	0	3	4	1
+Sickle	A curved weapon that might be sharp enough to shave with. Sure is good at cutting stalks of wheat. 	0	7	10	0
+Trident	A fork. A really big fork. 	0	8	11	0
+Mace	A club on steriods. 	0	7	12	0
+Smith's Hammer	A real hammer that might do some damage. 	0	6	12	0
+Glaive	A spear...? A sword...? Both in one?	0	8	11	0
+Bowstaff	A stout stick of wood hungry for bashed in some skulls. 	0	7	12	0
+Crossbow	A deadly weapon from a distance. 	1	15	20	1
+Great Bow	A large bow of incredible material that is quite accurate... given a skilled shooter. 	1	16	21	1
+Explosive Staff	A strangley shaped staff once wielded by a the Arch Wizard of the Crimosn Magic clan with a pointy hat. Rumor has it she screamed "Exlposion!" when firing off her deadly magic. She could only use it once....	2	15	23	1
+Heavy Crossbow	An extremly versitlie yet deadly ranged weapon. Assassins favor this for it's almost guarrenteed kill. 	1	16	23	1
+Hand Cannon	A gun? In my Isekai fantasy world?!	1	17	21	1
+Bastard Sword	A large and very dangerous sword. Sharp enough to shave with... given you can lift it above your shoulders. 	0	18	23	1
+Katana	The lightests of swords yet holds the deadliest edge. In the hands of a master few can stand against this blade. 	0	25	34	2
+Nichirin Cleavers	Demons stand no chance against these two cleaver-like swords held together by an indestructable chain. 	0	26	35	2
+Arm Crossbow	A surprisingly powerful weapon for one so small. Perfect for assassination or just feeling cool. 	1	27	36	2
+Dual Glaive	A tall spear with long single edged blades on either end. The best of a sword and the bowstaff. 	0	26	35	2
+Sandalphon	An incredibly powerful sword that can emit immense bursts of magic capable of leveling cities. It's scabbard is the throne of a dead god which falls back to the Astral realm after use. 	3	55	70	3
+Zafkiel	A time manipulating pistol that grants powers of a darker sort...	2	57	71	3
+Camael	A spirit of flame that possess the body of the owner. Grants the ability to manipulate flames at will which can melt through titanium. 	2	56	73	3
+Diarmuid and Duibhne 	Dual spears with the ability to cancel other magic and permenently curse the oppenents. 	0	81	96	4
+Excalibur 	It is a weapon of directive energy that converts the magical energy of the wielder into light by accelerating it with her factor of the dragon, intensifying the kinetic energy by convergence and acceleration, allowing for the use of Divine Spirit-level thaumaturgy.	3	84	99	4
+Gae Bolg	The 'result' and the 'action' delievered by the spear are reversed in order such that if the wielder attacks, the blade has already hit it's mark. 	3	82	97	4
+Ea		3	85	100	4
+Dragnipur		0	83	98	4
