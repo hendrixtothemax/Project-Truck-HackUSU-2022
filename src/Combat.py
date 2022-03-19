@@ -46,7 +46,7 @@ class Combat:
                 break
         print("\n!COMBAT HAS ENDED!")
 
-        weapon = self.player.weapons.getRandomWeaponByLevel(self.floor)
+        weapon = self.player.weapons.getRandomWeaponByLevel(str(self.floor))
         self.player.addItemToInventory(weapon)
         print(f"{weapon.name} has been added to your inventory!")
 
@@ -74,8 +74,7 @@ class Combat:
                 turnActive = False
             elif userInput == 3:
                 # View Inventory
-                print("Inventory Is Not Implemented!")
-                pass
+                self.player.inventoryTUI()
             elif userInput == 4:
                 # End Turn
                 print("")

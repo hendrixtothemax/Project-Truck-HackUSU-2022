@@ -30,19 +30,19 @@ class character:
 
     def printInventory(self):
         print(f"\n{self.name}'s Inventory")
-        i = 0
+        i = 1
         for item in self.inventory:
             i = i + 1
             print(f"\t[{i}] {item.name} | min dmg: {item.minDamage} | max dmg: {item.maxDamage}")
 
     def inventoryTUI(self):
         self.printInventory()
-        emptyStrings = []
+        emptyStrings = ["Cancel"]
         for i in range():
             emptyStrings.append("")
         inputObj = UserInput("",len(self.inventory),emptyStrings)
         userInput = inputObj.getInput()
-        chosenItem = self.inventory[userInput-1]
+        chosenItem = self.inventory[userInput-2]
         self.setWeapon(chosenItem)
         print(f"\nYou have equipped: {chosenItem.name}")
 
