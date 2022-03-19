@@ -2,6 +2,7 @@ from random import Random
 
 from src.UserInput import UserInput
 
+from copy import deepcopy
 
 class Combat:
 
@@ -24,7 +25,7 @@ class Combat:
             index = 0
             if not maxIndex < 1:
                 index = Random.randint(0, maxIndex)
-            enemies.append(possibleEnemyList[index])
+            enemies.append(deepcopy(possibleEnemyList[index]))
         return enemies
 
     def start(self):
@@ -60,6 +61,7 @@ class Combat:
                 pass
             elif userInput == 4:
                 # End Turn
+                print("")
                 turnActive = False
 
     def enemyTurn(self):
@@ -80,8 +82,8 @@ class Combat:
             return
         playerDamage = 1
         chosenEnemy = self.enemies[userInput-2]
-        print(f"\n{chosenEnemy.name} has taken {playerDamage} points of damage!")
         chosenEnemy.health.subHealth(playerDamage)
+        print(f"\n{chosenEnemy.name} has taken {playerDamage} points of damage! {chosenEnemy.health.healthReadout()}")
         if chosenEnemy.health.health < 0:
             print(f"The {chosenEnemy.name} has died!")
             self.enemies.pop(userInput-2)
